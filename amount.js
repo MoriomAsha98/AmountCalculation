@@ -21,7 +21,7 @@ document.getElementById('deposit_button').addEventListener('click',function (){
     }
 
       
-   depositTotal.innerHTML = totalDepositBalance;
+   depositTotal.innerHTML = depositTotalNumber + depositAmount;
 
 
    depositFiled.value = '';
@@ -42,13 +42,13 @@ document.getElementById('withdraw_button').addEventListener('click',function(){
    var withdrawBalance = document.getElementById('withdraw_balance');
    var withdrawBalanceNumber = parseFloat(withdrawBalance.innerText);
 
-   var TotalWithraw = withdrawNumber + withdrawBalanceNumber;
-       withdrawBalance.innerHTML = TotalWithraw;
+   var TotalWithdraw = withdrawNumber + withdrawBalanceNumber;
+       withdrawBalance.innerHTML = TotalWithdraw;
 
  var depositTotal = document.getElementById('deposit_total');
  var depositTotalNumber = parseFloat(depositTotal.innerText);
-    if(depositTotalNumber == -0){
-      return alert("you don't have enough Balance to withdraw")
+    if(depositTotalNumber == 0){
+      return 0, alert("you don't have enough Balance to withdraw")
     }
 
      depositTotalNumber = depositTotalNumber - withdrawNumber;
