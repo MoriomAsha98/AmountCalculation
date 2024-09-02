@@ -15,8 +15,9 @@ document.getElementById('submit').addEventListener('click',function(){
             alert('login successfull')
             window.location.href="http://127.0.0.1:5500/amountcalculation.html";
         }
-        else{
+        else{  
             alert('invailed cardencial')
         }
 
 })
+
